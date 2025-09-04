@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Northland</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+    }
+    header {
+      background: #2b6cb0;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .home-btn {
+      background-color: white;
+      color: #2b6cb0;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 2px solid white;
+      transition: all 0.3s ease;
+    }
+    .home-btn:hover {
+      background-color: #2b6cb0;
+      color: white;
+      border-color: white;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .contact-info {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+    .contact-info h2 {
+      color: #2b6cb0;
+      margin-bottom: 15px;
+    }
+    .contact-info p {
+      color: #4a5568;
+      line-height: 1.6;
+    }
+    .map {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .map h2 {
+      margin-bottom: 15px;
+      color: #2b6cb0;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      height: 400px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+  <a href="index.html" class="home-btn">🏠 Home</a>
+</header>
+
+<div class="container">
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <h2>Our Address</h2>
+    <p><strong>📍 Address:</strong> Obajana Dantsinke, along Dantsinke Bus stop,
+      Tarauni Local Government Area Kano, Kano State, Nigeria</p>
+    <p><strong>📞 Phone:</strong> +234 903 175 6416</p>
+    <p><strong>📞 Phone:</strong> +234 916 506 4271</p>
+    <p><strong>📞 Phone:</strong> +234 706 607 2110</p>
+    <p><strong>📧 Email:</strong> northlandschoolkano@gmail.com</p>
+  </div>
+
+  <!-- Google Map -->
+  <div class="map">
+    <h2>This is our school location in Kano</h2>
+    <iframe 
+      src="https://www.google.com/maps?q=Northland+Schools+Kano&output=embed" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+</body>
+</html>

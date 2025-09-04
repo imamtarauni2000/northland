@@ -1,0 +1,433 @@
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <title>Northland</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/Northland schools.JPG" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/nsk loader-logo.png">
+
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
+	
+    <!-- Custom & Default Styles -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<style>
+    /* Loader styles */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff; /* White background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column; /* Stack the spinner and logo */
+    }
+    .spinner {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 5px solid #ccc; /* Outer circle color */
+      border-top: 5px solid #1E3A8A; /* Circulating line color */
+      border-radius: 50%;
+      animation: spin 2s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .loader-logo {
+      width: 80px; /* Adjust size as needed */
+      height: auto;
+      position: absolute; /* Keep the logo fixed */
+      z-index: 1; /* Ensure the logo stays above the spinner */
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    /* Optional: Hide content until loader is removed */
+    .content {
+      display: none;
+    }
+    
+    /* Scroll Effect Styles for Text Sections */
+    .scroll-effect {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .scroll-effect.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <script>
+    // Hide loader and display content after 2 seconds
+    window.onload = function () {
+      setTimeout(() => {
+        document.querySelector(".loader").style.display = "none";
+        document.querySelector(".content").style.display = "block";
+      }, 2000);
+    };
+  </script>
+<body>  
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="images/nsk loader-logo.png" alt="">
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div id="wrapper">
+        <!-- BEGIN # MODAL LOGIN -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
+                        <form id="login-form">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="flaticon-add" aria-hidden="true"></span>
+                            </button>
+                            <div class="modal-body">
+                                <input class="form-control" type="text" placeholder="Find your Course?" required>
+                            </div>
+                        </form><!-- End # Login Form -->
+                    </div><!-- End # DIV Form -->
+                </div>
+            </div>
+        </div>
+        <!-- END # MODAL LOGIN -->
+
+        <header class="header">
+            <div class="topbar clearfix">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="col-md-6 col-sm-6 text-left">
+                            <p>
+                                <strong><i class="fa fa-phone"></i></strong> +234 903 175 6416 &nbsp;&nbsp;
+                                <strong><i class="fa fa-envelope"></i></strong> <a href="northlandschoolkano@gmail.com">info@Northland.com</a>
+                            </p>
+                        </div><!-- end left -->
+                        <div class="col-md-6 col-sm-6 hidden-xs text-right">
+                            <div class="social">
+                                <a class="facebook" href="https://www.facebook.com/profile.php?id=61577778579278&name=xhp_nt__fb__action__open_user" data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
+                                <a class="twitter" href="#" data-tooltip="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a class="google" href="https://www.instagram.com/northland_schools_kano/?igsh=Zmp4d3Z4ZTNwOTFx#" data-tooltip="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                            </div><!-- end social -->
+                        </div><!-- end left -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end topbar -->
+
+            <nav class="navbar navbar-default yamm">
+                <div class="container">
+            
+                    <!-- Logo (left side) -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+            
+                        <div class="logo-normal">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/Northland schools.JPG" alt="School Logo">
+                            </a>
+                        </div>
+                    </div>
+            
+                    <!-- Menu (right side) -->
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">News and Event <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="news.html">News</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admission<span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="adr.html">Admission Requirements</a></li>
+                                    <li><a href="adp.html">Admission produre</a></li>
+                                    <li><a href="ed.html">Exam Date</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="whatwedo.html">What We Do</a></li>
+                                    <li><a href="contact us.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+            
+                            <li class="iconitem">
+                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+            
+                </div>
+            </nav>
+            <!-- end navbar -->
+            </div><!-- end container -->
+        </header>
+
+        <section id="home" class="video-section js-height-full">
+            <div class="overlay"></div>
+            <div class="home-text-wrapper relative container">
+                <div class="home-message">
+                    <P>Northland Schools Kano</P>
+                    <small>Primary and Secondary Schools</small>
+                    <small>"Dream Big, Study Hard & Make It Happen."</small>
+        </section>
+
+                <section class="section gb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Recent News and Event</h3>
+                    <p>Our recent programmes have been quite stellar, showcasing a blend of creativity and innovation, we'ev organized workshops that delve into various subject, encouraging participants to explore the infinite expanse of knowlodge.</p>
+                </div><!-- end title -->
+
+                
+                                
+        </section>
+
+        <section class="section gb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Mission and Vission Statement</h3>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <img src="upload/blog_01.jpeg" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                     <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                                </div>
+                            </div><!-- end image-wrap -->
+
+                            <div class="blog-desc">
+                                <h4><a href="#">Vision Statement</a></h4>
+                                <p>To be a leader in producing skilled technical professionals, empowering Nigeria to compete globally in technology, management, and entrepreneurship.</p>
+                            </div><!-- end blog-desc -->
+
+                            <div class="post-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#">Northland Schools</a></li>
+                                </ul>
+                            </div><!-- end post-meta -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <img src="upload/blog_02.jpeg" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                     <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                                </div>
+                            </div><!-- end image-wrap -->
+
+                            <div class="blog-desc">
+                                <h4><a href="#">Mission</a></h4>
+                                <p>To provide quality education in technology and science, fostering entrepreneurial skills and character development. Northland Schools Kano equips students with the knowledge and expertise needed to excel in a dynamic digital world.</p>
+                            </div><!-- end blog-desc -->
+
+                            <div class="post-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a>Northland Schools</li>
+                                </ul>
+                            </div><!-- end post-meta -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box">
+                            <div class="image-wrap entry">
+                                <img src="upload/blog_03.jpeg" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                     <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                                </div>
+                            </div><!-- end image-wrap -->
+
+                            <div class="blog-desc">
+                                <h4><a href="#">Philosophy</a></h4>
+                                <p>We aim to produce graduates with strong academic and practical skills for self-reliance and industry relevance. Our focus is on nurturing enterprising individuals ready to thrive during and after their studies.</p>
+                            </div><!-- end blog-desc -->
+
+                            <div class="post-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#">Northland Schools</a></li>
+                                </ul>
+                            </div><!-- end post-meta -->
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+                            <!-- Video Added Here -->
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <video width="50%" controls autoplay unmuted>
+                                    <source src="upload/InShot.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div><!-- end col -->
+                    
+        </section>
+
+        <section class="section bgcolor1">
+            <div class="container">
+                <a href="#">
+                <div class="row callout">
+                    <div class="col-md-4 text-center">
+                        <h3><sup></sup>50% discount</h3>
+                        <h4> Enroll your children today!</h4>
+                    </div><!-- end col -->
+
+                    <div class="col-md-8">
+                        <p class="lead">Limited time offer! Your profile will be added to our "Students" directory as well. </p>
+                    </div>
+                </div><!-- end row -->
+                </a>
+            </div><!-- end container -->  
+        </section>
+
+        <footer class="section footer noover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Subscribe Our Newsletter</h3>
+                            <div class="newsletter-widget">
+                                <p>You can opt out of our newsletters at any time.<br> See our <a href="#">privacy policy</a>.</p>
+                                <form class="form-inline" role="search">
+                                    <div class="form-1">
+                                        <input type="text" class="form-control" placeholder="Enter email here..">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane-o"></i></button>
+                                    </div>
+                                </form>
+                              
+                            </div><!-- end newsletter -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Join us today</h3>
+                            <p>Would you like to earn your profits by joining our team? Join us without losing time.</p>
+                            <a href="apply.html" class="readmore">Join us</a>
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Quick Links</h3>
+                            <div class="tags-widget">   
+                                <ul class="list-inline">
+                                    <li><a href="MOdelSchool.html">ModelSchool</a></li>
+                                    <li><a href="news.html">News</a></li>
+                                    <li><a href="event.html">Event</a></li>
+                                    <li><a href="ourppl.html">Our People</a></li>
+                                    <li><a href="sports.html">Sports</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-2 col-md-2">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Support</h3>
+                            <div class="list-widget">   
+                                <ul>
+                                    <li><a href="#">Academic Calender</a></li>
+                                    <li><a href="#">Admission Help</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Policies</a></li>
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <div class="copyrights">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <div class="cop-logo">
+                            <a href="#"><img src="images/nsk loader-logo.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="pull-right">
+                        <div class="footer-links">
+                            <ul class="list-inline">
+                                <li>Northland Schools Kano : <a href="www.northlandschoolskano.com.ng">Northland</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </div><!-- end copy -->
+    </div><!-- end wrapper -->
+
+    <!-- jQuery Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- VIDEO BG PLUGINS -->
+    <script src="js/videobg.js"></script>
+
+</body>
+</html>

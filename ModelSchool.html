@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model School - Northland Schools Kano</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+    }
+
+    header {
+      background: #2b6cb0;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .home-btn {
+      background-color: white;
+      color: #2b6cb0;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 2px solid white;
+      transition: all 0.3s ease;
+    }
+    .home-btn:hover {
+      background-color: #2b6cb0;
+      color: white;
+      border-color: white;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      padding: 40px 10%;
+      gap: 30px;
+    }
+
+    /* Alternate background */
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: #eef2f7;
+    }
+
+    /* Image animation */
+    .section img {
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transform: translateX(-50px) scale(0.95);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+
+    .section.show img {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+
+    /* Reverse image for even sections */
+    .section:nth-child(even) img {
+      transform: translateX(50px) scale(0.95);
+    }
+
+    .section:nth-child(even).show img {
+      transform: translateX(0) scale(1);
+    }
+
+    /* Text animation */
+    .text {
+      width: 55%;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease 0.3s; /* 0.3s delay so it comes after image */
+    }
+
+    .section.show .text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text h2 {
+      color: #2b6cb0;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      color: #4a5568;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .section img, .text {
+        width: 100%;
+      }
+      .section img {
+        transform: translateY(30px) scale(0.95);
+      }
+      .section.show img {
+        transform: translateY(0) scale(1);
+      }
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Model School</h1>
+    <a href="index.html" class="home-btn">🏠 Home</a>
+  </header>
+
+  <!-- Nursery Section -->
+  <div class="section">
+    <img src="images/Classroom.JPEG" alt="Nursery Classroom">
+    <div class="text">
+      <h2>Nursery Section</h2>
+      <p>Our Nursery Section provides a warm and nurturing environment where young learners develop foundational skills. With engaging activities, creative play, and early literacy programs, we focus on building confidence and curiosity in our children.</p>
+    </div>
+  </div>
+
+  <!-- Primary Section -->
+  <div class="section">
+    <img src="images/Computer room.JPEG" alt="Primary Computer Room">
+    <div class="text">
+      <h2>Primary Section</h2>
+      <p>The Primary Section offers a balanced curriculum combining academic excellence with technology integration. Students gain essential skills in reading, writing, mathematics, and computer literacy, preparing them for the challenges ahead.</p>
+    </div>
+  </div>
+
+  <!-- Secondary Section -->
+  <div class="section">
+    <img src="images/Library.JPEG" alt="Secondary Library">
+    <div class="text">
+      <h2>Secondary Section</h2>
+      <p>Our Secondary Section focuses on advanced learning, critical thinking, and leadership skills. With access to modern laboratories, libraries, and extracurricular activities, students are equipped for success in higher education and beyond.</p>
+    </div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+
+    function revealOnScroll() {
+      let delay = 0;
+      sections.forEach((sec) => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100 && !sec.classList.contains('show')) {
+          setTimeout(() => {
+            sec.classList.add('show');
+          }, delay);
+          delay += 300; // staggered delay
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>

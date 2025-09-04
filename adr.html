@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Requirements - Northland Schools Kano</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+    }
+
+    header {
+      background: #2b6cb0;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .home-btn {
+      background-color: white;
+      color: #2b6cb0;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 2px solid white;
+      transition: all 0.3s ease;
+    }
+    .home-btn:hover {
+      background-color: #2b6cb0;
+      color: white;
+      border-color: white;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .accordion {
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 15px;
+      cursor: pointer;
+      background-color: #2b6cb0;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: #2c5282;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 15px;
+      background-color: #f9f9f9;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .accordion-content p {
+      color: #4a5568;
+      line-height: 1.6;
+      padding: 15px 0;
+    }
+
+    .accordion.active .accordion-content {
+      max-height: 200px;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Admission Requirements</h1>
+    <a href="index.html" class="home-btn">🏠 Home</a>
+  </header>
+
+  <div class="container">
+
+    <div class="accordion">
+      <div class="accordion-header">1. Academic Performance</div>
+      <div class="accordion-content">
+        <p>Provide recent academic records or report cards demonstrating good academic standing.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">2. Entrance Exam</div>
+      <div class="accordion-content">
+        <p>Successfully pass NSK’s entrance examination, which assesses knowledge in core subjects such as Mathematics, English, and Science.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">3. Age Appropriateness</div>
+      <div class="accordion-content">
+        <p>Meet the age requirement for the intended grade level.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">4. Application Form</div>
+      <div class="accordion-content">
+        <p>Complete and submit the NSK application form with all required details.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">5. Supporting Documents</div>
+      <div class="accordion-content">
+        <p>Submit necessary documents, including a birth certificate, passport-sized photographs, and previous school transcripts.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll(".accordion-header").forEach(header => {
+      header.addEventListener("click", function() {
+        const accordion = this.parentElement;
+        accordion.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

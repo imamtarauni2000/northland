@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Do - Mustibrah College</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #f0f5f9);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #1a365d;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .section {
+      flex: 1 1 300px;
+      padding: 25px;
+      border-radius: 15px;
+      background: white;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-top: 5px solid #2b6cb0;
+      transform: translateY(30px);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .section.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .section h2 {
+      color: #2b6cb0;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .action-btn {
+      background: linear-gradient(to right, #2b6cb0, #2c5282);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .action-btn:hover {
+      background: linear-gradient(to right, #2c5282, #2b6cb0);
+    }
+
+    .home-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2b6cb0;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: background 0.3s ease;
+      z-index: 1000;
+    }
+
+    .home-btn:hover {
+      background: #2c5282;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-btn">🏠 Home</a>
+
+  <h1>What We Do</h1>
+  
+  <div class="container">
+    <div class="section">
+      <h2>🏫 Model School</h2>
+      <p>We offer a wide range of programs tailored to equip students with the necessary skills in technology, management, and entrepreneurship.</p>
+      <a href="ModelSchool.html" class="action-btn">Explore Model School</a>
+    </div>
+
+    <div class="section">
+      <h2>🏫 Tahfeez</h2>
+      <p>Follow our simple application process to join Mustibrah College. Get all the information you need on how to apply and the necessary steps.</p>
+      <a href="tahafeez.html" class="action-btn">Tahfeez</a>
+    </div>
+
+    <div class="section">
+      <h2>📜 Entry Requirements</h2>
+      <p>Find out the necessary qualifications and documents needed to enroll in our various programs at Mustibrah College.</p>
+      <a href="adr.html" class="action-btn">View Requirements</a>
+    </div>
+  </div>
+
+  <script>
+    // Reveal sections one by one on scroll
+    const sections = document.querySelectorAll('.section');
+
+    function revealSections() {
+      let delay = 0;
+      sections.forEach((sec, index) => {
+        const position = sec.getBoundingClientRect().top;
+        if (position < window.innerHeight - 100) {
+          setTimeout(() => {
+            sec.classList.add('show');
+          }, delay);
+          delay += 300; // delay for each section
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealSections);
+    window.addEventListener('load', revealSections);
+  </script>
+</body>
+</html>
